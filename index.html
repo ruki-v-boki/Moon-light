@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta  charset="UTF-8">
+    <meta  name="viewport"  content="width=device-width, initial-scale=1.0">
+    <link  rel="stylesheet"  href="./fonts/fonts.css">
+    <link  rel="stylesheet"  href="./styles/global.css">
+    <link  rel="stylesheet"  href="./styles/style.css">
+    <title>Moon Light</title>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header  class="header">
+
+        <a  class="logo"  href="#0"><img  src="./images/logo.svg" alt="Logo Moon River"></a>
+
+        <nav  class="header__icons-box">
+            <a  class="header__icon"  href="#0">
+                <svg  width="24"  height="22"  viewBox="0 0 24 22"  fill="none"  xmlns="http://www.w3.org/2000/svg">
+                    <path  d="M11.9997 20C-9.1987 8.23285 5.64047 -4.54117 11.9997 3.53633C18.3598 -4.54117 33.1989 8.23285 11.9997 20Z"  stroke="white"  stroke-width="1.8"/>
+                </svg>
+            </a>
+            <a  class="header__icon"  href="#0">
+                <svg  width="15"  height="22"  viewBox="0 0 15 22"  fill="none"  xmlns="http://www.w3.org/2000/svg">
+                    <path  d="M11.8333 5.44444C11.8333 7.89904 9.89323 9.88889 7.5 9.88889C5.10677 9.88889 3.16667 7.89904 3.16667 5.44444C3.16667 2.98985 5.10677 1 7.5 1C9.89323 1 11.8333 2.98985 11.8333 5.44444Z"  stroke="white"  stroke-width="1.8"/>
+                    <path  d="M1 15.4444C1 12.3762 3.42512 9.88889 6.41667 9.88889H8.58333C11.5749 9.88889 14 12.3762 14 15.4444V19.8889C14 20.5025 13.515 21 12.9167 21H2.08333C1.48502 21 1 20.5025 1 19.8889V15.4444Z"  stroke="white"  stroke-width="1.8"/>
+                </svg>
+            </a>
+
+            <button  class="cart-button"  type="button">
+                <svg  class="cart-button__icon"  width="17"  height="22"  viewBox="0 0 17 22"  fill="none"  xmlns="http://www.w3.org/2000/svg">
+                    <path  d="M4.5 8H2C1.44772 8 1 8.44772 1 9V20C1 20.5523 1.44772 21 2 21H15C15.5523 21 16 20.5523 16 20V9C16 8.44772 15.5523 8 15 8H12.5M4.5 8V5C4.5 2.79086 6.29086 1 8.5 1V1C10.7091 1 12.5 2.79086 12.5 5V8M4.5 8H12.5"  stroke="white"  stroke-width="1.8"  stroke-linecap="round"  stroke-linejoin="round"/>
+                </svg>1
+            </button>
+
+            <label  class="header__menu-button-label">
+                <input  class="header__menu-button-input  visually-hidden"  name="menu"  type="checkbox"> 
+                <svg  width="30"  height="18"  viewBox="0 0 30 18"  fill="none"  xmlns="http://www.w3.org/2000/svg">
+                    <line  x1="0.9"  y1="1.1"  x2="29.1"  y2="1.1"  stroke="white"  stroke-width="1.8"  stroke-linecap="round"  stroke-linejoin="round"/>
+                    <line  x1="0.9"  y1="9.1"  x2="29.1"  y2="9.1"  stroke="white"  stroke-width="1.8"  stroke-linecap="round"  stroke-linejoin="round"/>
+                    <line  x1="0.9"  y1="17.1"  x2="29.1"  y2="17.1"  stroke="white"  stroke-width="1.8"  stroke-linecap="round"  stroke-linejoin="round"/>
+                </svg>
+            </label>
+        </nav>
+
+    </header>
+
+    <main>
+
+
+        <!-- HERO -->
+        <section  class="hero">
+
+            <div  class="hero__column">
+                <header  class="hero__column-header">
+                    <h1  class="hero__title">high jewelry</h1>
+                    <a  class="hero__link"  href="#0">Смотреть коллекцию</a>
+                    <img  class="hero__image"  src="./images/hero-ring.png"  alt="КОЛЬЦО TRINITY, Cartier">
+                </header>
+
+                <footer  class="hero__column-footer">
+                    <article  class="language-switch-box">
+                        <h2  class="visually-hidden">Сменить язык</h2>
+
+                        <label  class="language-switch-box__label">ru
+                            <input  class="language-switch-box__input  visually-hidden"  type="radio"  name="language-input"  checked>
+                        </label>
+
+                        <label  class="language-switch-box__label">en
+                            <input  class="language-switch-box__input  visually-hidden"  type="radio"  name="language-input">
+                        </label>
+                    </article>
+                </footer>
+            </div>
+
+
+            <div  class="hero__column hero__column_end">
+                <footer  class="hero__column-footer  hero__column-footer_end">
+                    <article  class="product-description  product-description_end">
+                        <a  class="product-description__title  product-description__title_bg-black"  href="#0">КОЛЬЦО TRINITY, Cartier</a>
+                        <h4  class="product-description__text  product-description__text_bg-black">Белое золото, бриллианты</h4>
+                        <p  class="product-description__price  product-description__price_bg-black">498 000 ₽</p>
+                    </article>
+                </footer>
+            </div>
+
+        </section>
+
+
+        <!-- CATEGORY -->
+        <section  class="category">
+            <h2  class="visually-hidden">Категории</h2>
+
+            <article  class="category__card  category__card_men">
+                <div  class="overlay"></div>
+                <div  class="category__content">
+                    <a  class="category__link"  href="#0">Перейти в раздел</a>
+                    <h2 class="category__title">Для мужчин</h2>
+                </div>
+            </article>
+
+            <article  class="category__card  category__card_women">
+                <div  class="overlay"></div>
+                <div  class="category__content">
+                    <a  class="category__link"  href="#0">Перейти в раздел</a>
+                    <h2 class="category__title">Для женщин</h2>
+                </div>
+            </article>
+
+        </section>
+
+
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer></footer>
+</body>
+</html>
