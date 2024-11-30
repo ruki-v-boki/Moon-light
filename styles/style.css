@@ -1,4 +1,96 @@
 
+/* ------------------------------- TITLE ------------------------------- */
+.section-title {
+    font-family: 'Forum', serif;
+    font-weight: 400;
+    font-size: 48px;
+    letter-spacing: 0.03em;
+}
+
+/* с помощью этого стиля на перой строке всегда будет только одно слово */
+.section-title::first-line {
+    word-spacing: 1440px;
+}
+
+
+/* ------------------------------- FORM ------------------------------- */
+.form {
+    width: 100%;
+}
+
+.form__title {
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    letter-spacing: inherit;
+}
+
+.form__text {
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    letter-spacing: inherit;
+}
+
+.form__textfield-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form__textfield-box::after {
+    content: '';
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    object-position: bottom;
+    background-color: currentColor;
+}
+
+.form__textfield {
+    width: 100%;
+    border: none;
+    padding-bottom: 10px;
+    background-color: transparent;
+    appearance: none;
+}
+
+.form__textfield::-webkit-search-decoration,
+.form__textfield::-webkit-search-cancel-button,
+.form__textfield::-webkit-search-results-button,
+.form__textfield::-webkit-search-results-decoration {
+	-webkit-appearance:none;
+}
+
+/* --------------- button */
+.form__button {
+    border: none;
+    padding-bottom: 8px;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.form__button path[stroke] {
+    stroke: currentColor;
+}
+
+/* --------------- status */
+.form__textfield:focus {
+    outline: none;
+}
+
+.form__button:focus-visible {
+    outline: 2px solid blue;
+    outline-offset: 5px;
+}
+
+
 /* ------------------------------- PRODUCT-DESCRIPTION ------------------------------- */
 .product-description {
     display: flex;
@@ -11,7 +103,7 @@
     align-items: flex-end;
 }
 
-                /* title */
+/* --------------- title */
 .product-description__title {
     color: #272727;
     font-family: 'Futura PT', sans-serif;
@@ -21,11 +113,11 @@
     text-transform: uppercase;
 }
 
-.product-description__title_bg-black {
+.product-description__title_bgc-accent {
     color: #FFF;
 }
 
-                /* text */
+/* --------------- text */
 .product-description__text {
     margin-top: 10px;
     color: #757575;
@@ -34,7 +126,7 @@
     font-size: 18px;
 }
 
-.product-description__text_bg-black {
+.product-description__text_bgc-accent {
     color: #C2C2C2;
 }
 
@@ -42,7 +134,7 @@
     color: #E7E7E7;
 }
 
-                /* price */
+/* --------------- price */
 .product-description__price {
     margin-top: 8px;
     color: #E2B67A;
@@ -73,7 +165,7 @@
     height: 53px;
 }
 
-                /* icons-box */
+/* --------------- icons-box */
 .header__icons-box {
     display: flex;
     align-items: center;
@@ -85,7 +177,7 @@
     display: block;
 }
 
-                /* cart */
+/* --------------- cart */
 .cart-button {
     display: flex;
     align-items: center;
@@ -103,7 +195,7 @@
     margin-right: 9px;
 }
 
-                /* menu */
+/* --------------- menu */
 .header__menu-button-label {
     display: block;
     margin-left: 40px;
@@ -113,9 +205,10 @@
 /* .header__menu-button-input {
 } */
 
-                /* status */
+/* --------------- status */
 .header__menu-button-label:has(:focus-visible) {
-    outline: auto;
+    outline: 2px solid blue;
+    outline-offset: 5px;
 }
 
 
@@ -135,7 +228,7 @@
     grid-template-areas: '.' 'center' 'end';
 }
 
-                /* column-header */
+/* --------------- column-header */
 .hero__column-header {
     position: relative;
     display: flex;
@@ -171,7 +264,7 @@
     background-color: #272727;
 }
 
-                /* image */
+/* --------------- image */
 .hero__image {
     position: absolute;
     top: -12px;
@@ -179,7 +272,7 @@
     display: block;
 }
 
-                /* column-footer */
+/* --------------- column-footer */
 .hero__column-footer {
     display: flex;
     grid-area: end;
@@ -187,7 +280,7 @@
     margin-bottom: 60px;
 }
 
-                /* language-switch */
+/* --------------- language-switch */
 .language-switch-box {
     display: flex;
     gap: 10px;
@@ -202,25 +295,26 @@
     cursor: pointer;
 }
 
-                /* column-end */
+/* --------------- column-end */
 .hero__column_end {
     width: 44%;
     background-color: #272727;
 }
 
-                /* footer-end */
+/* --------------- footer-end */
 .hero__column-footer_end {
     justify-content: center;
     margin-right: -42px;
 }
 
-                /* status */
+/* --------------- status */
 .language-switch-box__label:has(.language-switch-box__input:checked)  {
     color: #272727;
 }
 
 .language-switch-box__label:has(:focus-visible) {
-    outline: auto;
+    outline: 2px solid blue;
+    outline-offset: 5px;
 }
 
 
@@ -238,7 +332,7 @@
     background-color: rgba(39, 39, 39, 0.4);
 }
 
-                /* card */
+/* --------------- card */
 .category__card {
     position: relative;
     display: flex;
@@ -286,7 +380,7 @@
     background-color: #FFF;
 }
 
-                /* image */
+/* --------------- image */
 .category__card_men {
     background: url(../images/category-men.png) no-repeat center / cover;
 }
@@ -304,46 +398,37 @@
 
 .map__content {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 50%;
+    padding-top: 10px;
     padding-bottom: 10px;
     color: #FFF;
     background-color: #272727;
 }
 
-                /* form */
-.form {
-
-}
-
-.form_map {
+.map__title {
     max-width: 385px;
 }
 
-.form__title {
-    margin-bottom: 16px;
-    font-family: 'Forum', serif;
-    font-weight: 400;
-    font-size: 48px;
-    letter-spacing: 0.03em;
+/* --------------- form */
+.form_map {
+    max-width: 385px;
+    padding-top: 17px;
 }
 
-.form__text {
+.form__text_map {
     font-family: 'Futura PT', sans-serif;
     font-weight: 300;
     font-size: 18px;
 }
 
-.form__textfield-box {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 62px;
+.form__textfield-box_map {
+    margin-top: 60px;
 }
 
-.form__textfield {
-    width: 100%;
-    border: none;
+.form__textfield_map {
     color: #FFF;
     font-family: 'Futura PT', sans-serif;
     font-weight: 300;
@@ -352,30 +437,11 @@
     appearance: none;
 }
 
-.form__textfield::-webkit-search-decoration,
-.form__textfield::-webkit-search-cancel-button,
-.form__textfield::-webkit-search-results-button,
-.form__textfield::-webkit-search-results-decoration {
-	-webkit-appearance:none;
-}
-
-                /* button */
-.form__button {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-                /* map-iframe */
+/* --------------- map-iframe */
 .map__map-iframe {
     width: 740px;
     height: 604px;
     filter: grayscale(1) invert(1)  opacity(85%) saturate(0);
-}
-
-                /* status */
-.form__textfield:focus {
-    outline: none;
 }
 
 
@@ -388,7 +454,7 @@
     padding: 20px 0;
 }
 
-                /* cards */
+/* --------------- cards */
 .product-card {
     display: flex;
     flex-direction: column;
@@ -400,7 +466,7 @@
     background-color: #EDEDED;
 }
 
-                /* grid-templates */
+/* --------------- grid-templates */
 .product-card_header-start {
     grid-column-start: 1;
     grid-row-start: 1;
@@ -421,7 +487,7 @@
     grid-row-start: 2;
 }
 
-                /* card-header */
+/* --------------- card-header */
 .product-card__header {
     display: flex;
     justify-content: center;
@@ -438,7 +504,7 @@
     height: 100%;
 }
 
-                /* card-images */
+/* --------------- card-images */
 .image-box__image {
     display: block;
 }
@@ -469,7 +535,7 @@
     margin-bottom: -20px;
 }
 
-                 /* big-image */
+/* --------------- big-image */
 .product-presentation-card {
     display: flex;
     grid-column-start: 2;
@@ -492,13 +558,9 @@
 
 .social-networks__title {
     margin-left: 162px;
-    font-family: 'Forum', serif;
-    font-weight: 400;
-    font-size: 48px;
-    letter-spacing: 0.03em;
 }
 
-                /* slider */
+/* --------------- slider */
 .social-slider {
     width: fit-content;
     margin-top: 80px;
@@ -521,7 +583,7 @@
     height: 385px;
 }
 
-                /* slider-footer */
+/* --------------- slider-footer */
 .slider__footer {
     display: flex;
     justify-content: space-between;
@@ -529,7 +591,7 @@
     padding: 30px 160px 95px 162px;
 }
 
-                /* social-icons */
+/* --------------- social-icons */
 .social-icons-box {
     display: flex;
     gap: 20px;
@@ -539,7 +601,7 @@
     display: block;
 }
 
-                /* slider-navigation */
+/* --------------- slider-navigation */
 .slider__nav {
     display: flex;
     align-items: center;
@@ -574,7 +636,7 @@
     cursor: pointer;
 }
 
-                /* status */
+/* --------------- status */
 .slider__dots-span:has(.slider__dots-input:checked) {
     width: 10px;
     height: 10px;
@@ -582,5 +644,83 @@
 }
 
 .slider__dots-label:has(:focus-visible) {
-    outline: auto;
+    outline: 2px solid blue;
+    outline-offset: 5px;
+}
+
+
+/* ------------------------------- OFFLINE-SHOP ------------------------------- */
+.offline-shop {
+    display: flex;
+}
+
+/* --------------- image */
+.offline-shop__image {
+    display: block;
+    width: 710px;
+    height: 640px;
+}
+
+/* --------------- content */
+.offline-shop__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 110px;
+    width: 50%;
+    padding-left: 183px;
+}
+
+.offline-shop__title {
+    font-family: 'Futura PT', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.phone {
+    display: block;
+    margin-top: 30px;
+    color: #959595;
+    font-family: 'Futura PT', sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+}
+
+/* --------------- form */
+.form_offline-shop {
+    max-width: 280px;
+}
+
+.form__title_offline-shop {
+    font-family: 'Futura PT', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.form__textfield-box_offline-shop {
+    margin-top: 30px;
+}
+
+.form__textfield-box_offline-shop::after {
+    bottom: -1px;
+}
+
+.form__textfield_offline-shop {
+    padding-bottom: 5px;
+    font-family: 'Futura PT', sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+}
+
+.form__textfield_offline-shop::placeholder {
+    color: #959595;
+}
+
+/* --------------- button */
+.form__button_offline-shop {
+    padding-bottom: 5px;
 }

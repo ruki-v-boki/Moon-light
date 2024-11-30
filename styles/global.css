@@ -43,11 +43,11 @@ address {
 body {
     width: 1440px;
     margin: 0 auto;
-    font-family: 'Futura PT', 'Forum', 'Segoe UI', sans-serif;
-    font-weight: normal;
-    color: #272727;
 
     padding-bottom: 200px;
+    color: #272727;
+    font-family: 'Futura PT', 'Forum', 'Segoe UI', sans-serif;
+    font-weight: normal;
     /* background-color: antiquewhite; */
 }
 
@@ -63,4 +63,9 @@ body {
 
 .none {
     display: none !important;
+}
+
+*:focus-visible {
+    outline: 2px solid blue;
+    outline-offset: 5px;
 }
