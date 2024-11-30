@@ -1,5 +1,5 @@
 
-                                /* PRODUCT-DESCRIPTION */
+/* ------------------------------- PRODUCT-DESCRIPTION ------------------------------- */
 .product-description {
     display: flex;
     flex-direction: column;
@@ -58,8 +58,7 @@
 }
 
 
-
-                                /* HEADER */
+/* ------------------------------- HEADER ------------------------------- */
 .header {
     position: relative;
     z-index: 1;
@@ -120,8 +119,7 @@
 }
 
 
-
-                                /* HERO */
+/* ------------------------------- HERO ------------------------------- */
 .hero {
     display: flex;
     justify-content: space-between;
@@ -226,8 +224,7 @@
 }
 
 
-
-                                /* CATEGORY */
+/* ------------------------------- CATEGORY ------------------------------- */
 .category {
     display: flex;
     gap: 20px;
@@ -299,8 +296,7 @@
 }
 
 
-
-                                /* MAP */
+/* ------------------------------- MAP ------------------------------- */
 .map {
     display: flex;
     margin-top: 20px;
@@ -383,15 +379,13 @@
 }
 
 
-
-
-                                /* SHOP */
+/* ------------------------------- SHOP ------------------------------- */
 .shop {
     display: grid;
     grid-template-columns: 400px 600px 400px;
     grid-template-rows: 400px 400px;
     gap: 20px;
-    margin-top: 20px;
+    padding: 20px 0;
 }
 
                 /* cards */
@@ -485,4 +479,108 @@
     padding-bottom: 20px;
     padding-left: 30px;
     background: url(../images/shop-image.png) no-repeat center / cover;
+}
+
+
+/* ------------------------------- SOCIAL-NETWORKS ------------------------------- */
+.social-networks {
+    padding-top: 100px;
+    overflow: hidden;
+    color: #FFF;
+    background-color: #272727;
+}
+
+.social-networks__title {
+    margin-left: 162px;
+    font-family: 'Forum', serif;
+    font-weight: 400;
+    font-size: 48px;
+    letter-spacing: 0.03em;
+}
+
+                /* slider */
+.social-slider {
+    width: fit-content;
+    margin-top: 80px;
+}
+
+.slider {
+    display: flex;
+    flex-direction: column;
+}
+
+.slider-box {
+    display: flex;
+    gap: 25px;
+    margin-left: -167px;
+    overflow: hidden;
+}
+
+.slide {
+    width: 100%;
+    height: 385px;
+}
+
+                /* slider-footer */
+.slider__footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding: 30px 160px 95px 162px;
+}
+
+                /* social-icons */
+.social-icons-box {
+    display: flex;
+    gap: 20px;
+}
+
+.social-button {
+    display: block;
+}
+
+                /* slider-navigation */
+.slider__nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.slider__dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -5px;
+}
+
+.slider__dots-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 35px;
+    padding-right: 3px;
+    cursor: pointer;
+}
+
+.slider__dots-span {
+    display: block;
+    width: 8px;
+    height: 8px;
+    margin-top: 11px;
+    margin-bottom: 11px;
+    border-radius: 50%;
+    background-color: #656565;
+    cursor: pointer;
+}
+
+                /* status */
+.slider__dots-span:has(.slider__dots-input:checked) {
+    width: 10px;
+    height: 10px;
+    background-color: #FFF;
+}
+
+.slider__dots-label:has(:focus-visible) {
+    outline: auto;
 }
