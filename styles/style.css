@@ -23,6 +23,7 @@
     font-weight: inherit;
     font-size: inherit;
     letter-spacing: inherit;
+    text-transform: uppercase;
 }
 
 .form__text {
@@ -56,6 +57,7 @@
     width: 100%;
     border: none;
     padding-bottom: 10px;
+    color: currentColor;
     background-color: transparent;
     appearance: none;
 }
@@ -91,6 +93,27 @@
 }
 
 
+/* ------------------------------- ADDRESS ------------------------------- */
+.address {
+    width: 100%;
+}
+
+.address__title {
+    font-family: 'Futura PT', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.address__phone {
+    display: block;
+    margin-top: 30px;
+    color: #959595;
+    font-family: 'Futura PT', sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+}
 /* ------------------------------- PRODUCT-DESCRIPTION ------------------------------- */
 .product-description {
     display: flex;
@@ -671,23 +694,6 @@
     padding-left: 183px;
 }
 
-.offline-shop__title {
-    font-family: 'Futura PT', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-}
-
-.phone {
-    display: block;
-    margin-top: 30px;
-    color: #959595;
-    font-family: 'Futura PT', sans-serif;
-    font-weight: 300;
-    font-size: 22px;
-}
-
 /* --------------- form */
 .form_offline-shop {
     max-width: 280px;
@@ -698,7 +704,6 @@
     font-weight: 400;
     font-size: 18px;
     letter-spacing: 0.05em;
-    text-transform: uppercase;
 }
 
 .form__textfield-box_offline-shop {
@@ -723,4 +728,104 @@
 /* --------------- button */
 .form__button_offline-shop {
     padding-bottom: 5px;
+}
+
+
+/* ------------------------------- FOOTER ------------------------------- */
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+    padding: 78px 162px 90px;
+    color: #FFF;
+    background-color: #272727;
+}
+
+/* --------------- ul-list */
+.footer__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__link {
+    font-family: 'Futura PT', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* --------------- bottom */
+.footer__bottom-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo_footer {
+    margin-top: -23px;
+}
+
+/* --------------- content */
+.footer__content-box {
+    display: flex;
+    gap: 80px;
+}
+
+.address_footer {
+    min-width: 185px;
+}
+
+.address__title_footer {
+    font-size: 14px;
+}
+
+.address__phone_footer {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+/* --------------- social */
+.social-icons-box_footer {
+    margin-top: 15px;
+}
+
+/* --------------- form */
+.form_footer {
+    min-width: 280px;
+}
+
+.form__title_footer {
+    font-size: 14px;
+    letter-spacing: 0.05em;
+}
+
+.form__textfield-box_footer {
+    margin-top: 15px;
+}
+
+.form__textfield_footer {
+    font-family: 'Futura PT', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+/* --------------- app */
+.download-app-box {
+    display: flex;
+    gap: 7px;
+    margin-top: 12px;
+}
+
+.download-app-link {
+    display: block;
+    width: 103px;
+    height: 35px;
+}
+
+.download-app-link_appstore {
+    width: 90px;
+    height: 30px;
+    margin-top: 4px;
 }
