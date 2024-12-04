@@ -1,0 +1,281 @@
+
+/* ------------------------------- DROP-MENU ------------------------------- */
+.drop-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    visibility: hidden;
+    min-height: 1024px;
+    opacity: 0;
+    color: #FFF;
+    background-color: #272727;
+    transition: visibility 0s linear 300ms, opacity 500ms;
+}
+
+/* ------------------------------- HEADER ------------------------------- */
+.drop-menu__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 162px 40px;
+}
+
+.drop-menu__icons-box {
+    display: flex;
+    align-items: center;
+    gap: 39px;
+    margin-top: 5px;
+}
+
+.drop-menu__menu-button-label {
+    margin-left: 17px;
+}
+
+/* --------------- menu-box */
+.drop-menu-box {
+    width: 100%;
+}
+
+/* --------------- nav */
+.category-list {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 75px;
+    padding-left: 164px;
+    background-color: #2F2F2F;
+}
+
+.category-list > .category-list__item:not(:last-child) {
+    margin-right: 50px;
+}
+
+/* --------------- label */
+.category-list__item {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: fit-content;
+    height: 100%;
+    font-family: 'Futura PT', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.category-list__item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    border-radius: 5px;
+    opacity: 0;
+    background-color: currentColor;
+    transition: 0.4s ease;
+}
+
+/* --------------- content-box */
+.category-content-box {
+    padding-top: 70px;
+    padding-left: 164px;
+}
+
+/* --------------- container */
+.content-container {
+    display: none;
+    grid-template-columns: 199px  195px  232px  199px  199px;
+    grid-template-rows: 1fr 25px;
+}
+
+.content-container__list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+}
+
+.content-container__list-title {
+    margin-bottom: 30px;
+    font-family: 'Futura PT', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.content-container__list-link {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    font-family: 'Futura PT', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0.06em;
+}
+
+/* --------------- brands-button */
+.brands-button {
+    color: #EFC58B;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    font-style: italic;
+    cursor: pointer;
+}
+
+.more-brands-button {
+    grid-column-start: 4;
+    grid-row-start: 2;
+}
+
+.hide-brands-button {
+    visibility: hidden;
+    grid-column-start: 4;
+    grid-row-start: 2;
+    opacity: 0;
+    transition: visibility 0s linear 300ms, opacity 500ms;
+}
+
+.more-brands-hidden-list {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    padding-top: 50px;
+}
+
+/* ------------------------------- FOOTER ------------------------------- */
+.drop-menu__footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 85px;
+    margin-top: 65px;
+    border-top: 2px solid #2F2F2F;
+    padding: 70px 162px 75px 0;
+}
+
+/* --------------- banner */
+.drop-menu__banner {
+    min-width: 749px;
+    min-height: 268px;
+    background: url(../images/Desktop__menu-image.png) no-repeat center/cover;
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.banner__text {
+    font-family: 'Futura PT', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0.06em;
+    text-align: start;
+}
+
+.banner__title {
+    font-family: 'Forum', serif;
+    font-weight: 400;
+    font-size: 48px;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+
+.banner__link {
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    font-family: 'Futura PT', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0.06em;
+}
+
+.banner__link svg {
+    margin-bottom: -3px;
+    margin-left: 15px;
+}
+
+/* --------------- content-box */
+.drop-menu__contact-box {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* ------------------------------- STATUS ------------------------------- */
+
+/* --------------- brands-button */
+#more-or-hide:checked ~ .more-brands-button {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 300ms, opacity 500ms;
+}
+
+#more-or-hide:checked ~ .hide-brands-button {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 500ms;
+}
+
+#more-or-hide ~ .more-brands-hidden-list {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 300ms, opacity 500ms;
+}
+
+#more-or-hide:checked ~ .more-brands-hidden-list {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 500ms;
+}
+
+#more-or-hide:focus-visible ~ .hide-brands-button,
+#more-or-hide:focus-visible ~ .more-brands-button {
+    outline: 1px solid currentColor;
+    outline-offset: 5px;
+}
+
+/* --------------- content */
+
+/* -----id -------------nav--------------label------------------------- */
+#jewelry:checked ~ .category-list .category-list__item[for='jewelry']::after,
+#watch:checked ~ .category-list .category-list__item[for='watch']::after,
+#aromas:checked ~ .category-list .category-list__item[for='aromas']::after,
+#brands:checked ~ .category-list .category-list__item[for='brands']::after,
+#leather:checked ~ .category-list .category-list__item[for='leather']::after,
+#wedding:checked ~ .category-list .category-list__item[for='wedding']::after,
+#other:checked ~ .category-list .category-list__item[for='other']::after {
+    opacity: 1;
+}
+
+/* -----------id ---------------------nav----------------label--------- */
+#jewelry:checked:focus-visible ~ .category-list .category-list__item[for='jewelry'],
+#watch:checked:focus-visible ~ .category-list .category-list__item[for='watch'],
+#aromas:checked:focus-visible ~ .category-list .category-list__item[for='aromas'],
+#brands:checked:focus-visible ~ .category-list .category-list__item[for='brands'],
+#leather:checked:focus-visible ~ .category-list .category-list__item[for='leather'],
+#wedding:checked:focus-visible ~ .category-list .category-list__item[for='wedding'],
+#other:checked:focus-visible ~ .category-list .category-list__item[for='other'] {
+    outline: auto;
+    outline-offset: 10px;
+}
+
+/* -----id --------------section-------------article------------------- */
+#jewelry:checked ~ .category-content-box .content__jewelry,
+#watch:checked ~ .category-content-box .content__watch,
+#aromas:checked ~ .category-content-box .content__aromas,
+#brands:checked ~ .category-content-box .content__brands,
+#leather:checked ~ .category-content-box .content__leather,
+#wedding:checked ~ .category-content-box .content__wedding,
+#other:checked ~ .category-content-box .content__other {
+    display: grid;
+}

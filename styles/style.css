@@ -114,6 +114,8 @@
     font-weight: 300;
     font-size: 22px;
 }
+
+
 /* ------------------------------- PRODUCT-DESCRIPTION ------------------------------- */
 .product-description {
     display: flex;
@@ -174,6 +176,7 @@
 
 
 /* ------------------------------- HEADER ------------------------------- */
+/* ---------------------------------------------------------------------- */
 .header {
     position: relative;
     z-index: 1;
@@ -225,14 +228,18 @@
     cursor: pointer;
 }
 
-/* .header__menu-button-input {
-} */
-
 /* --------------- status */
-.header__menu-button-label:has(:focus-visible) {
+.header__menu-button-input:checked ~ .drop-menu {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 500ms;
+}
+
+.header__menu-button-input:focus-visible + .header__menu-button-label {
     outline: 2px solid blue;
     outline-offset: 5px;
 }
+/* стили для выпадающего меню записаны в отдельном файле */
 
 
 /* ------------------------------- HERO ------------------------------- */
@@ -768,7 +775,7 @@
 }
 
 /* --------------- content */
-.footer__content-box {
+.footer__contact-box {
     display: flex;
     gap: 80px;
 }
